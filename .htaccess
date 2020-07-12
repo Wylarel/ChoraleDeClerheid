@@ -1,0 +1,7 @@
+RewriteEngine On
+RewriteCond %{HTTPS} off
+RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [R,L]
+AuthType Basic
+AuthName "Veuillez entrer les identifiants communiques pour acceder au site:"
+AuthUserFile /kunden/homepages/25/d797946426/htdocs/.htpasswd
+require valid-user
